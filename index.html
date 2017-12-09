@@ -1,0 +1,12 @@
+<input type="submit" class="search-submit" value="Search">
+</form></div></div></div></header><h1 class="tool-title">Strong Password Generator</h1><div id="app"><div class="section container-content"><h2 class="h4">Generated Password</h2><input id="password" type="text" v-model="password" /><div class="text-small text-muted text-center"><button class="button-ghost button-copy" data-clipboard-target="#password">Copy Password</button><button class="button" @click="count++">Generate Another</button></div><label class="mt2">Password Type</label><input type="radio" id="strong" value="strong" v-model="type">
+<label class="label-inline" for="strong">Strong Password (Alphanumeric with special characters)</label>
+<br>
+<input type="radio" id="alphanumeric" value="alphanumeric" v-model="type">
+<label class="label-inline" for="alphanumeric">Alphanumeric Password</label>
+<br>
+<input type="radio" id="phrase" value="phrase" v-model="type">
+<label class="label-inline" for="phrase">Phrase Password</label>
+<br>
+<input type="radio" id="phrase_special_chars" value="phrase_special_chars" v-model="type">
+<label class="label-inline" for="phrase_special_chars">Phrase Password with special characters</label><label class="mt2">Password Length (<span v-html="unit"></span>)</label><input type="number" v-model="length" style="width: 50%;" /></div></div><div class="container-content"><div class="section"><h2 class="h3">How to Generate Strong Password?</h2><ul class="divider"><li>A strong password will be automatically generated on page load which you can copy using the 'Copy Password' button.</li><li>Default option is to generate a strong password with alphabets, numbers and special characters of length 15.</li><li>You can change the password type to just alphanumeric, phrases or phrases with special charcaters.</li><li>You can also specify the character length or word length (in case of phrases) for generating password.</li><li>You may want to use a password manager to remember the generated password as you will not be able to retrieve it back from this site.</li><li>We do not store any of the generated passwords and everything is done inside your browser.</li></ul></div>
